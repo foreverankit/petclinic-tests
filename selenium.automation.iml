@@ -60,5 +60,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: net.jcip:jcip-annotations:1.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.yaml:snakeyaml:1.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: commons-codec:commons-codec:1.6" level="project" />
+    <orderEntry type="library" name="com.github.detro.ghostdriver:phantomjsdriver:1.1.0" level="project" />
   </component>
 </module>
