@@ -17,14 +17,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class PetClinicTest {
-  //private WebDriver driver;
-  private ChromeDriver driver;
+  private WebDriver driver;
+  //private ChromeDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
+  public static String chromeDriverPath = "/usr/bin/chromedriver";
 
   @Before
   public void setUp() throws Exception {
+    System.setProperty("webdriver.chrome.driver", chromeDriverPath);
     driver = new ChromeDriver();
 //	DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
 //    driver = new PhantomJSDriver(capabilities);
