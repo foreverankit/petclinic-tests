@@ -29,7 +29,7 @@ public class PetClinicTest {
 //	DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
 //    driver = new PhantomJSDriver(capabilities);
 //    baseUrl = "http://ec2-3-232-123-215.compute-1.amazonaws.com:31090";
-    baseUrl = System.getProperty("petclinicUrl");
+    baseUrl = "http://ecs-petclinic.kaiburr.com:8888/";
     //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
   }
 
