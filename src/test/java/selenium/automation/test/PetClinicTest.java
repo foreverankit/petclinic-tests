@@ -17,15 +17,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class PetClinicTest {
-  //private ChromeDriver driver;
+  private ChromeDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-  public static String chromeDriverPath = "/usr/bin/chromedriver";
-  WebDriver driver = new ChromeDriver();
+  //public static String chromeDriverPath = "/usr/bin/chromedriver";
+  //WebDriver driver = new ChromeDriver();
   @Before
   public void setUp() throws Exception {
-    System.setProperty("webdriver.chrome.driver",chromeDriverPath);
+    driver = new ChromeDriver();
+    //System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 //	DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
 //    driver = new PhantomJSDriver(capabilities);
 //    baseUrl = "http://ec2-3-232-123-215.compute-1.amazonaws.com:31090";
@@ -60,6 +61,8 @@ public class PetClinicTest {
     driver.findElement(By.name("lastName")).clear();
     driver.findElement(By.name("lastName")).sendKeys("chedde");
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+
+
   }
 
   @After
