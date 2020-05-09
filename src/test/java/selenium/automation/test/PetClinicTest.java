@@ -22,12 +22,14 @@ public class PetClinicTest {
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-  //public static String chromeDriverPath = "/usr/bin/chromedriver";
+  public static String chromeDriverPath = "/usr/bin/chromedriver";
   //WebDriver driver = new ChromeDriver();
   @Before
   public void setUp() throws Exception {
+    System.setProperty("webdriver.chrome.driver", chromeDriverPath);
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
+    options.setBinary("/usr/bin/google-chrome");
     driver = new ChromeDriver(options);
     //System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 //	DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
