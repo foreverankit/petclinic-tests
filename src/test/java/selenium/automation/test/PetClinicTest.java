@@ -9,6 +9,7 @@ import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,7 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class PetClinicTest {
-  private ChromeDriver driver;
+  private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
@@ -25,7 +26,9 @@ public class PetClinicTest {
   //WebDriver driver = new ChromeDriver();
   @Before
   public void setUp() throws Exception {
-    driver = new ChromeDriver();
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("--headless");
+    driver = new ChromeDriver(options);
     //System.setProperty("webdriver.chrome.driver",chromeDriverPath);
 //	DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
 //    driver = new PhantomJSDriver(capabilities);
